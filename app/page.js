@@ -1,5 +1,5 @@
 import Image from "next/image";
-import bg from "@/public/bg.png";
+import bg from "@/public/bg.webp"; // Use optimized WebP format
 
 export default function Page() {
   return (
@@ -11,8 +11,8 @@ export default function Page() {
         placeholder="blur"
         quality={80}
         className="object-cover object-top"
+        priority // Prioritize this image for faster loading
       />
-
       <div className="relative z-10 text-center">
         <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal">
           Welcome to paradise.

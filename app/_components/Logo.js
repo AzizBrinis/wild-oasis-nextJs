@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/logo.png";
+import logo from "@/public/logo.webp"; // Use optimized WebP format
 
 function Logo() {
   return (
@@ -11,6 +11,7 @@ function Logo() {
         height="60"
         width="60"
         alt="The Wild Oasis logo"
+        priority // Prioritize logo for faster loading
       />
       <span className="text-xl font-semibold text-primary-100">
         The Wild Oasis

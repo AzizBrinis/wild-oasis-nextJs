@@ -1,7 +1,9 @@
 import "@/app/_styles/globals.css";
 import { Josefin_Sans } from "next/font/google";
-import Header from "./_components/Header";
+import dynamic from "next/dynamic";
 import { ReservationProvider } from "./_components/ReservationContext";
+
+const Header = dynamic(() => import("./_components/Header"), { ssr: false }); // Lazy load Header
 
 export const metadata = {
   title: {

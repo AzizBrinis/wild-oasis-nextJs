@@ -1,5 +1,7 @@
-import Navigation from "@/app/_components/Navigation";
+import dynamic from "next/dynamic";
 import Logo from "@/app/_components/Logo";
+
+const Navigation = dynamic(() => import("./Navigation"), { ssr: false }); // Lazy load Navigation
 
 function Header() {
   return (
